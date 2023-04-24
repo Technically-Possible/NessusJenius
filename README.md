@@ -4,8 +4,19 @@ Don't be a Nessus zero - use Jen's genius script to parse your scan results.
 
 ## Overview
 
-NessusJenius is a Python script that parses Nessus scan results in XML format and generates a CSV file containing information about the hosts, ports, and vulnerabilities detected in the scan.
+The NessusJenius.py script is a Python script that can parse one or multiple .nessus files and extract relevant information from them, such as the IP address, port, protocol, severity, plugin ID, plugin name, synopsis, description, and risk factor. The script writes this information to a CSV file specified by the user.
 
+## Installation:
+The script requires Python 3 to run, along with the following packages:
+
+lxml
+argparse
+logging
+These packages can be installed using pip and the included requirements.txt file. To install the dependencies, navigate to the directory containing the script and run the following command:
+
+```
+pip install -r requirements.txt
+```
 ## Requirements
 
 - Python 3.5 or later
@@ -13,17 +24,14 @@ NessusJenius is a Python script that parses Nessus scan results in XML format an
 
 ## Usage
 
-1. Clone the repository:
-git clone https://github.com/<username>/NessusJenius.git
+The script takes two command-line arguments:
 
-2. Install the required libraries:
-pip install -r requirements.txt
-
-3. Run the script: python nessusjenius.py -d /path/to/nessus/files -o output.csv
-
-
-Replace `/path/to/nessus/files` with the path to the directory containing your Nessus scan files, and `output.csv` with the name of the CSV file you want to generate.
-
+-d or --directory: the directory containing the .nessus files to parse
+-o or --output: the output CSV file to write the extracted information to
+To run the script, navigate to the directory containing the script and run the following command:
+```lua
+python NessusJenius.py -d /path/to/nessus/files -o /path/to/output/file.csv
+```
 The script will parse all Nessus scan files in the specified directory and generate a CSV file containing information about the hosts, ports, and vulnerabilities detected in the scan.
 
 ## Credits
