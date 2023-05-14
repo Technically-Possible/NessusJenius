@@ -35,7 +35,6 @@ def parse_nessus_files(nessus_files):
             continue
         all_hosts.extend(parse_nessus_file(nessus_file))
     return all_hosts
-
 def main():
     nessus_dir = input("Enter the directory containing Nessus files: ")
     output_file = input("Enter the name of the output file: ")
