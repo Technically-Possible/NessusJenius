@@ -29,8 +29,11 @@ The script takes two command-line arguments:
 -d or --directory: the directory containing the .nessus files to parse
 -o or --output: the output CSV file to write the extracted information to
 To run the script, navigate to the directory containing the script and run the following command:
-```lua
-python NessusJenius.py -d /path/to/nessus/files -o /path/to/output/file.csv
+```Bash
+python NessusJenius.py 
+Enter the directory containing Nessus files: /path/to/nessus/files
+Enter the name of the output file: NameOfTheFinalCSV
+
 ```
 The script will parse all Nessus scan files in the specified directory and generate a CSV file containing information about the hosts, ports, and vulnerabilities detected in the scan.
 
